@@ -4,8 +4,8 @@ resource "aws_security_group" "node_group_one" {
 
     ingress {
         from_port = 22
-        to_port = 22
-        protocol = "tcp"
+        to_port   = 22
+        protocol  = "tcp"
 
         cdr_blocks = [
             "10.0.0.0/8",
