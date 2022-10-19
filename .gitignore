@@ -1,3 +1,6 @@
+#keyfile
+rootkey.csv
+
 # Local .terraform directories
 **/.terraform/*
 
@@ -5,6 +8,7 @@
 *.tfstate
 *.tfstate.*
 *.tfplan
+
 
 # Crash log files
 crash.log
