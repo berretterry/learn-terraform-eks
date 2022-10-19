@@ -35,10 +35,6 @@ module "eks" {
             aws_security_group.node_group.one.id
         ]
     }
-
-    two = {
-        name = "node-group-2"
-    }
   }
 
 }
