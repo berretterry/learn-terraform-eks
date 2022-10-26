@@ -13,9 +13,9 @@ output "cluster_security_group_id" {
     value = module.eks.cluster_security_group_id
 }
 
-output "region" {
+output "AWS_REGION" {
     description = "AWS region"
-    value = var.region
+    value = var.AWS_REGION
 }
 
 output "cluster_name" {

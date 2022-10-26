@@ -1,9 +1,8 @@
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "11.0.0"
-  # insert the 4 required variables here
+  version = "18.26.6"
 
-  cluster_name = local.cluter_name
+  cluster_name = "test-cluster"
   cluster_version = "1.22"
 
   vpc_id = module.vpc.vpc_id
@@ -32,7 +31,7 @@ module "eks" {
         EOT
 
         vpc_security_group_ids = [
-            aws_security_group.node_group.one.id
+            aws_security_group.node_group.id
         ]
     }
   }

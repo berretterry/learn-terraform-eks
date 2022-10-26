@@ -1,4 +1,4 @@
-resource "aws_security_group" "node_group_one" {
+resource "aws_security_group" "node_group" {
     name_prefix = "node_group_one"
     vpc_id = module.vpc.vpc_id
 
@@ -7,7 +7,7 @@ resource "aws_security_group" "node_group_one" {
         to_port   = 22
         protocol  = "tcp"
 
-        cdr_blocks = [
+        cidr_blocks = [
             "10.0.0.0/8",
         ]
     }
