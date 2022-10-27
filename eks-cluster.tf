@@ -33,6 +33,12 @@ module "eks" {
         vpc_security_group_ids = [
             aws_security_group.node_group.id
         ]
+
+        depends_on = [
+          aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
+          aws_iam_role_policy_attachment.AmazonEKS_CNI_Policy,
+          #aws_iam_role_policy_attachment.AmazonEC2ContainerRegistryReadOnly,
+        ]
     }
   }
 
